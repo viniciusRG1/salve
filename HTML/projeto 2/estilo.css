@@ -1,0 +1,97 @@
+
+.letra{
+    font-size: 20px;
+}
+.letraG{
+    font-size: 40px;
+}
+
+#fundo{
+    background-image: url(fundo-ibis.png);
+    background-color: gray;
+    background-attachment: fixed;
+}
+.meiosite{
+    width: 100%;
+    text-align: center;
+}
+#coropc{
+    background-color: #464646;
+    border-style: groove;
+    border-color: #1C1C1C;
+    border-width: 10px;
+}
+   
+a:link {
+color: red;
+background-color: transparent;
+text-decoration: none;
+}
+a:visited {
+color: red;
+background-color: transparent;
+text-decoration: none;
+}
+a:hover {
+color: red;
+background-color: transparent;
+text-decoration: underline;
+}
+a:active {
+color: pink;
+background-color: transparent;
+text-decoration: underline;
+}
+.corpotext{
+    text-align: center;
+    background-color: black;
+    color: blanchedalmond;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#divcurta{
+    width: 60%;
+    text-align: center;
+}
+#escala{
+    border-style: groove;
+    border-color: #1C1C1C;
+    border-width: 10px;
+}
+#lista{
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+}
+.body{
+    font: 20px Arial, Helvetica, sans-serif;
+    
+}
+.cordosocial{
+    padding: 5px;
+    background-color: rgb(27, 27, 27);
+    margin: 15px;
+    padding-left: 15px;
+    margin-left: 25px;
+}
+.float{
+    float: left;
+}
+.tamanhoicon{
+    margin: 15px;
+    width: 40px;
+    height: 40px;
+    
+}
+.clear{
+    clear: both;
+}
+.inline{
+    display: inline;
+
+}
+.flex{
+    display: flex;
+}
