@@ -1,0 +1,39 @@
+
+
+a:link {
+  color: black;
+  background-color: gray;
+}
+a:visited {
+  color: black;
+  background-color: gray ;
+}
+a:hover {
+  color: white;
+  background-color: gray;
+}
+a:active {
+  color: white;
+  background-color: gray;
+}
+.midtexto{
+    width: 50%;
+}
+.borda{
+  border: solid 1px white;
+} 
+#fundo{
+  background-color: gray;
+}
+.margin{
+  margin: 20px;
+  padding: 20px;
+  border: 3px solid white;
+}
+form{
+  margin: 0 auto;
+  width: 400px;
+  padding: 1em;
+  border: 3px solid white;
+
+}
