@@ -2,11 +2,11 @@
 
 a:link {
   color: black;
-  background-color: white;
+  background-color:gray;
 }
 a:visited {
   color: black;
-  background-color: white ;
+  background-color: gray ;
 }
 a:hover {
   color: white;
@@ -24,7 +24,7 @@ a:active {
 }
 .midtexto:hover{
   background-color: gray;
-  color: white;
+  color: gray;
 }
 .borda{
   border: solid 1px white;
