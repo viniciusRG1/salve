@@ -2326,7 +2326,7 @@ for(int tt = 0; tt < valor_operacao; tt++){
 
 return 0;
 }
-*/
+/*
 #include<iostream>
 #include<bits/stdc++.h>
 #define MAX 10000000
@@ -2415,3 +2415,143 @@ int main (){
 
 return 0;
 }
+*/
+
+/*
+lazy propagatin - serve para que possa atualizar nó somente quando necessario, para q não gaste processamento atoa, ou antes do necessário
+pois caso vc quise-se atualizar um valor no nó 2, temos que atualizar todos os seus descendentes, ou seja, aparti9r do nó q queremos atualizar terems q fazer um n! pra cada nivel q descemos, ou seja no caso de ter 2 niveis, teremos q fazer 3!,
+deixando inviavel, para q tenha algo de alto nivel.
+funcionaria da seguinte forma, CASO tenhamos q atualizar um nó de arvore[3], mudaremos tambem o seu lazy, nesse caso o lazy[3], e todos os lazy de seus decendentes, oq é mais fácil do que mudar todo um intervalo, ocasionando menos gastos energéticos
+e isso acontece com todos os filhos do nó chamado pelo usuario, usando de exemplo, caso chamassemos o nó 4 dentro de uma árvore de 1 a 15 teremos a atualizção clara do número 4, pórem teremos tambem de atualizar o número 8 e 9 pois são filhos do número 4
+
+#include<iostream>
+#include<bits/stdc++.h>
+#define MAX 10000000
+
+using namespace std;
+
+int arvore[MAX];
+int acao[MAX];
+
+int atualiza (int no, int i, int j, int posicao, int novo_valor){
+    if(i == j){
+
+        arvore[no] = i;
+        acao[posicao] = novo_valor;
+    }else{
+        int esquerda = 2*no;
+        int direita = 2*no + 1;
+        int meio =(i + j)/2;
+
+    if(posicao <= meio){
+            atualiza(esquerda, i, meio, posicao, novo_valor);
+        }else{
+                atualiza(direita, meio + 1, j, posicao, novo_valor);
+        }
+    if(acao[esquerda] < acao[direita]){
+        arvore[no] = arvore[esquerda];
+    }else{
+        arvore[no] = arvore[direita];
+    }
+    }
+
+    return 0;
+}
+
+int consulta(int no, int i, int j, int A, int B){
+    if(A <= i && j <= B){
+        return arvore[no];
+    }
+    if(i > B || j > A){
+        return -1;
+    }
+    int esquerda = 2*no;
+    int direita = 2*no + 1;
+
+    int meio = (i + j)/2;
+
+    int R_E = consulta(esquerda, i, meio, A, B);
+    int R_D = consulta(direita, meio + 1, j, A, B);
+
+    if(R_E == -1){
+        return R_D;
+    }if(R_D == -1){
+        return R_E;
+    }
+
+    if(acao[R_E] < acao[R_D]){
+        R_E;
+    }else{
+        return R_D;
+    }
+return 1;
+}
+
+int main (){
+    int no = 1, i = 1, j, posicao, novo_valor, valor_inicial, N_operacao, t, A, B, SOMA;
+    char escolha;
+    cin >> valor_inicial >> N_operacao;
+    j = valor_inicial;
+    for(t = 0; t < valor_inicial; t++){
+    cin >> novo_valor;
+    posicao = t;
+    atualiza(no, i, j, posicao, novo_valor);
+    }
+    posicao = 0;
+    for(int tt = 0; tt < 0; tt++){
+        cin >> escolha;
+        if(escolha == 'A'){
+            atualiza(no, i, j, posicao, novo_valor);
+        }else if(escolha == 'S'){
+            cin >> A >> B;
+            SOMA = SOMA + consulta(no, i, j, A, B);
+
+        }
+        cout << SOMA;
+    }
+
+return 0;
+}
+
+void atualiza(int no, int i, int j, int a, int b, int valor){
+
+	int esquerda = 2*no;     // índice do filho da esquerda
+	int direita  = 2*no + 1; // índice do filho da direita
+	int meio = (i + j)/2;
+
+	if(lazy[no]){ // se existirem operações atrasadas a serem feitas, temos que fazê-las agora
+
+		arvore[no] += lazy[no]*(j - i + 1); // já que somamos lazy[no] a cada valor de i a j, fazemos isso (j-i+1) vezes
+
+		if(i != j){ // se i != j, o nó possui descendentes e temos que atualizar o valor de lazy deles
+			lazy[direita]  += lazy[no];
+			lazy[esquerda] += lazy[no];
+		}
+
+		lazy[no] = 0; // agora que realizamos as operações devidas, zeramos novamente o valor de lazy[no]
+	}
+
+	if(i > j || i > b || a > j) return; // se a atualização que vamos fazer não afeta esse nó, encerramos a função
+
+	if(a <= i && j <= b){ // se a operação cobre o nó inteiro
+
+		arvore[no] += valor*(j-i+1); // atualizamos o valor do nó
+
+		// se o nó possui descendentes, atualizamos o valor de lazy de cada um deles
+		// em vez de chamar a função recursiva. Isso é o que otimiza nosso tempo de execução
+		if(i != j){
+			lazy[direita] += valor;
+			lazy[esquerda] += valor;
+		}
+	}
+
+	else{ // caso a operação atualize apenas alguns valores do nó, chamamos a função nos dois filhos
+
+		atualiza(esquerda,      i, meio, a, b, valor); // atualizamos o filho da esquerda
+		atualiza( direita, meio+1,    j, a, b, valor); // atualizamos o filho da direita
+
+		arvore[no] = arvore[esquerda] + arvore[direita]; // atualizamos o nó que estamos
+	}
+
+}
+*/
