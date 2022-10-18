@@ -1,0 +1,59 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	display: grid;
+	grid-template-areas: 
+		"header header"
+		"main aside"
+		"footer footer";
+}
+
+header{
+	grid-area: header;
+	height: 300px;
+}
+aside{
+	grid-area: aside;
+	height: 168px;
+}
+footer{
+	grid-area: footer;
+	height: 343px;
+}
+
+#colorB{
+	background-color: blue;
+}
+#colorR{
+	background-color: red;
+}
+#colorG{
+	background-color: green;
+	position: relative;
+	width: 1920px;
+
+}
+#colorY{
+	background-color: yellow;
+	width: auto;
+
+}
+#colorBL{
+	background-color: black;
+}
+#colorP{
+	background-color: purple;
+}
+#boxTop{
+	height: 300px;
+	width: 960px;
+	background-color: greenyellow;
+}
+#boxButton{
+	height: 343px;
+	width: 718px;
+	position: relative;
+	left: 600px;
+	background-color: darkcyan;
+}
