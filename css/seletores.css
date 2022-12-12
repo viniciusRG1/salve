@@ -1,0 +1,20 @@
+/*
+    seletores conecta um elemento html com o CSS a fim de alterar o elemento html
+   
+    element seletor - seleciona todos os elementos do HTML
+    
+    id - é unico para cada tag, serve para idendificar cada tag
+
+    class - é uma tag de turma, quando você quer repetir as alterações e pode ser repetido
+
+    atribute selector - uma tag que terá uma alteração específica, isso implica que todas as vezes em que você utilizar tal tag ela irá vir já com essa alteração pronta
+    
+    pseudo-class selector - vai depender do estado que está a tag referenciada, por exeplo: caso esteja com o mouse encima mudará a cor.
+    esse tipo de coisa pode ser lida pelo script e alterar a cor
+
+    multiplos - pode-se referenciar varias e varias tag de uma única vez utilizando a virgula 
+    EX:
+        h1:hoder, p:hoder{
+            color: red;
+        }
+    */

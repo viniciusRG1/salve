@@ -1,0 +1,11 @@
+/*
+    olhará a primeira tag que ocorre dentro dentro da tag pai e comparará com as requisições do script para ver se é true, caso seja
+    fará a modificação, mas caso a primeira não for a necessaria para satisfazer a modificação, ela será ignorada
+
+    ul li:first-child{
+        font-weight: blod;
+        color: red;
+    }
+
+    nessa requisição procurará um ul no qual seu primeiro filho seja um li, caso não ocorra ele será ignorado
+*/

@@ -1,0 +1,11 @@
+/*
+    essa formatação é bem parecida com a anterior, a gande diferença que nesse modo, você contará todos os filhos e modificará apenas aquele filho que seja da mesma tag escolhida
+
+    EX:
+        articlesp:nth-child(2){
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+    modificará o segundo filho CASO ele for uma tag p, caso não, será ignorado.
+*/

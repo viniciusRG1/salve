@@ -1,0 +1,151 @@
+O programa de gestão de ensino remoto apresentará um sistema de login de usuário que devepermitir diferenciar professores de alunos, assim como permitir que cada professor gerenciesuas turmas, com suas respectivas tarefas e alunos que podem acessar essas tarefas. Alémdisso, o sistema deve permitir que o professor passe tarefas por meio de arquivos, assimcomoministrar aulas, as quais permitem comunicação pelo chat entre os alunos e os professores. Osistema deve possuir métodos que retornam a somatória total das notas referentes às
+atividades ministradas até aquele momento. O usuário pode realizar o cadastro como professor ou aluno. Caso o login seja efetuado comoaluno, o usuário terá acesso às turmas em que ele está cadastrado, assim como as tarefas easomatória de notas em cada turma, suas faltas e às aulas. Para o professor, é possível criar
+uma turma e cadastrar seus alunos, criar aulas para suas turmas, passar materiais e tarefas
+associadas às aulas. Classes do trabalho
+Usuario:
+Atributos: String nome, String email, String senha, String telefone
+Métodos:
+getNome():
+getEmail(), getSenha(), getTelefone(), mandarMensagem(): permite inserir uma mensagem de texto no chat de uma aula *No caso de email igual a algum já cadastrado, mostrar uma mensagem de erro* Aluno extends Usuario:
+Atributos: Boletim relatorio[]*, Lista de Tarefas *permite saber em quais turmas o aluno está cadastrado
+Metodos:
+getTarefas(), getBoletim(). Professor:
+Atributos: Turma Turmas[]
+Metodos:
+insereAluno(): insere um aluno na turma passada como argumento
+criarTurma():adiciona uma turma no vetor de turmas atribuído ao professor
+criarAula():adiciona uma aula na turma (passada como argumento)
+inserirTarefa(): insere uma tarefa que ficara disponível para a turma passada como argumentoinserirMaterial(): adiciona um arquivo em uma aula passada como argumento, desde queaaula seja de uma turma criada pelo professor
+atribuiNota(): soma uma nota ao total de um aluno de uma determinada turma
+atribuiFalta(): soma uma falta ao total de um aluno de uma determinada turma
+Boletim:
+Atributos: String nomeTurma, float nota, int faltas
+Métodos:
+getNomeTurma(), addNota(): método usado no atribuiNota(da classe Professor) para adicionar o valor passadocomo argumento à nota do aluno dono do boletim
+addFalta(): método usado no atribuiFalta(da classe Professor) para adicionar o númerodefaltas passado como argumento ao total de faltas do aluno dono do boletim
+Aula:
+Atributos: String titulo, Arquivo[] Material, Chat chat, Data data
+Métodos:
+getTitulo()
+Turma:
+Atributos: String nome, Aluno alunos[], Aula aulas[] , Tarefa tarefas[]
+Metodos:
+setTarefa(): método usado pelo método inserirTarefa(), da classe Professor, para atribuir umatarefa(passada como argumento) à turma
+addAluno(): método usado pelo método insereAluno(), da classe Professor, para adicionar
+uma aluno(passada como argumento) à turma
+addAula(): método usado pela classe Professor para adicionar uma aula à turma passadacomo argumento
+Data
+Atributos: Date data, Método: getData()
+Mensagem
+Atributos: String mensagem, Usuario autor, Date data
+Metodos:
+getMensagem(), getUsuario(), getData()
+Chat
+Atributos: Mensagem mensagens[], Usuario participantes[]
+Métodos:
+getMensagens(), getParticipantes()
+Tarefa
+Atributos: String titulo, Data dataEntrega, Data dataAtribuicao, Arquivo[] arqTarefa
+Metodos:
+getTitulo(), getDataEntrega(), getDataAtribuicao(), getArqTarefa()
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+comentario 1-
+	criar um abstrato pessoa{
+			nome 
+			senha 
+			email
+			telefone
+			método mandar mensagem(assinatura 1) // privado
+			método mandar mensagem(assinatura 2) // publico
+			String tipo
+			atributo bool conversa existente
+			método existe chat
+			método iniciar conversa
+
+	}
+
+comentário 2-
+
+	classe aluno{
+		extends pessoa
+		String matricula 128712871827821 / 12021BCC027
+		método entrar aula
+		método fazer tarefa
+		método exibir horário 
+		método estudar
+		método perguntar nota(aluno, turma)
+		array turmas
+		hashmap matriculado turma:nota{
+				// nota seria dada pelo professor
+		}
+		método boletim 
+		
+		
+	}
+
+	classe professor{
+		extends pessoa
+		int cadastro
+		método criar turma
+		método inserir aluno
+		método inserir matéria 
+		método inserir tarefa 
+		método atribuir nota
+		método iniciar aula
+		método atribuir falta
+		método finalizar aula
+		método dar aula
+		método dar prova
+		método atribuir nota prova
+		
+	}
+
+comentário 3-
+
+	classe aula{
+		String titulo
+		String descrição
+		arquivo materal
+		atributo chat
+		método data	// podemos usar para validar as tarefas, n existe tarefa antes da aula
+		métodos coloca titulo
+		método lista de presentes	
+	}
+	
+	classe turma{
+		array tarefa {
+				
+		}
+		array aluno
+		array aula
+		array notas{
+			nota tarefa 
+			nota prova	
+		}
+	}
+	
+comentário 4-
+	
+		classe tarefa{
+			float nota
+			string titulo	//criar titulo com o metodo criar tarefa(construtor)
+			string descricao
+			Arquivo arqTarefa[]
+			array  alunos que não fez tarefa
+			String dataEntrega
+		}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+passo 1-
+	criar pessoa
+	criar chat
+	criar arquivo
+passo 2-
+	criar aluno
+	criar turma
+passo 3-
+	criar aula 
+	criar tarefa
+passo 4-
+	criar professor
+passo 5- 
+	criar a parte gráfica

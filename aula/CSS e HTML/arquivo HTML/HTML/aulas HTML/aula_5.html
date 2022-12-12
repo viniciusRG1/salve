@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>aula 5</title>
+</head>
+<body>
+	<h2>login</h2>
+	<form action="processa.php"> <!--para onde esse formulario deverá ser mandado, site ou autenticador-->
+		login:<br>
+		<input type="text" name="login"><br><!--entrada de dados: text para texto, password para senha, button  para criar um botão, submit para enviar o formulario-->
+		senha:<br>
+		<input type="password"text name="senha"><br>
+		<input type="button" value="logar"><br>
+	</form>
+	<h2>cadastre-se</h2>
+	<form>
+	login:<br>
+	<input type="text" name="login"><br>
+	sexo:<br><!-- aqui vemos um modo de n existir a multipla escolha, pois não tem como ser homem e mulher ao mesmo tempo alem de limitar a escolha do usuario-->
+	<input type="radio" name="sexo" value="M"> masculino<br>
+	<input type="radio" name="sexo" value="F"> feminino<br>
+	interesses<br><!-- aqui é diferente das escolhas anteriores, pois existe s a ideia de limitar as escolhar porem, aqui podemos escolher mais de um, são pra situações em que é necessario ou com possibilidade de escolher mais de uma opção, exemplo seria os interesses, as pessoas tem mais de um  interesse -->
+	<input type="checkbox" name="interesses"> futebol<br>
+	<input type="checkbox" name="interesses"> cursos<br>
+	<input type="checkbox" name="interesses"> moda<br>
+	estado<br>
+	<select><!--aqui é parecido com a primeira forma porem, aqui existe alem de uma economia de espaço e é melhor para respostas curtas-->
+		<option value="SP">SP</option>
+		<option value="MG">MG</option>
+		<option value="RJ">RJ</option>
+	</select>
+	observações:<br><!--área ilimitada para que o usuario possa escolher -->
+	<textarea></textarea>
+	</form>
+
+	<input type="submit" name="cadastrar">
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+/*
+    hover é quando passamos quando o mouse por cima de algum link 
+    
+    EX:
+        a:haver{
+            color: red;
+        }
+
+    focus é quando passamos por cima de uma caixa de texto que temos
+
+    Ex:
+        input:focus{
+            border-color:blue;
+        }
+
+*/

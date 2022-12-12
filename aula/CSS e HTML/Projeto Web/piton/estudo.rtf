@@ -1,0 +1,608 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang22 ***\par
+a declara\'e7\'e3o de uma variavel \'e9 semelhante a de C, com a diferen\'e7a de, n necessitar a declara\'e7\'e3o de tipo e muito menos de ';' no final dos comando\par
+no python existe a fun\'e7\'e3o booleana, que usando True, False, or e and, podemos programar para resolver situa\'e7\'f5es, detalhe que o true e false tem q ter a primeira letra maiuscula\par
+soma de valores num\'e9ricos e feito igual ao C\par
+vamos ver agora sobre tipo string, \'e9 considerad de tipo string caso:\par
+estiver entre aspas simples ex:'uma string', '234'.\par
+estiver entre aspas duplas ex: "uma string", "234".\par
+estiver entre aspas simples tripla ex: '''uma string''', '''234'''\par
+estiver entr3e aspas duplas tripla ex """uma sstring""", """234"""\par
+nome = "geek Universidade"\par
+print(nome)\par
+print(type(nome))\par
+***\par
+***\par
+nome = "geek Universidade"\par
+print(nome)\par
+print(type(nome))\par
+lembrando que caso o queria pular uma linha vc dever\'e1 usar '\\*' ou '\\n'\par
+print(variavel.upper())\par
+a express\'e3o upper deixar tudo maiusculo\par
+print(variavel.lower())\par
+a express\'e7ao lower deixa tudo minusculo\par
+print(variavel.split())\par
+a express\'e3o split coloca toda a frase dentro de uma lista, quando \'e9 colocado em lista, vemos que cada letra \'e9 colocada em uma posi\'e7\'e3o\par
+ex: ['o', 'i']\par
+    [ 0 ,  1 ]\par
+vemos que temos duas posi\'e7\'f5es, a 0 e a 1, caso tenhamos um maior, poderiamos imprimir parte da lista\par
+ex: nome = 'geek universidade'\par
+print(nome[0:4])\par
+print(nome[0:15])\par
+essa contru\'e7\'e3o mostra para o programa at\'e9 onde vc quer ir\par
+se vc usar o c\'f3digo print(nome.split()[0]), vc ter\'e1 as palavras completas na lista\par
+porem se vc trocar o 0 pelo 1 ou seja print(nome.split()[1]) vc invertera toda a matriz\par
+porem vc pode escrever esse segundo c\'f3digo mais r\'e1pidamente com [::-1]dentro do print\par
+print(variavel[::-1])\par
+por fim temos o print(variavel.replace(' ',' ')), essa linha tem como ideia vc trocar uma letra por outra\par
+por exemplo, caso eu tenha "ola como vc foi na prova", usa-se esse c\'f3digo pra trocar 0 por i print(nome.replace('0','i'))\par
+ficaria "ila cimi vc fii na priva", devido a essa troca\par
+\par
+nome = 'geek universidade'\par
+print(nome[0:4])\par
+print(nome[0:17])\par
+print(nome[::-1])\par
+print(nome.replace('e','i'))\par
+\par
+***\par
+***\par
+escopo de variaveis\par
+primeira coisa que devemos saber \'e9 qual \'e9 o limite da variavel, nesse caso temos duas situa\'e7\'f5es\par
+1 - variaveis globais = s\'e3o reconhecidas em todo o programa\par
+2 - variaveis locais = s\'e3o reconhecidas apenas no bloco onde foram declaradas\par
+uma coisa legal de python \'e9 q vc pode colocar uma string em uma varivel f\'e1cilmente\par
+ex numero = 'oi como vc vai'\par
+isso \'e9 feito e aceito, bloco s\'e3o condi\'e7\'f5es ou situa\'e7\'f5es q podem ocorrer, casos de repeti\'e7\'e3o, e as variaveis locais s\'e3o declaradas dentro dessas situa\'e7\'f5es\par
+***\par
+***\par
+estruturas l\'f3gicas e condicionais em python\par
+em python temos if, else, elif, que s\'e3o condicioanis que criam caminhos dentro do nosso c\'f3digo\par
+ex:\par
+      idade = 6\par
+if idade < 18:\par
+      print('menor de idade')\par
+elif idade == 18:\par
+      print('ele tem 18')\par
+else:\par
+      print('maior de idade')\par
+\par
+if \'e9 o 'se' e o else \'e9 o 'se n\'e3o', o elif \'e9 'ou' no sentido de nova op\'e7\'e3o\par
+vemos que pra ser considerado dentro de um bloco, ele deve estar a 4 espa\'e7os da linha base do bloco anterior, e s\'f3 se cria outro bloco caso vc coloque : na frente da condi\'e7\'e3o\par
+\par
+and (e), or (ou), not (n\'e3o), if (e). s\'e3o operadores un\'e1rios: - not, is. s\'e3o operadores binarios: - and, or\par
+\par
+ativo = True\par
+logado = False\par
+\par
+if ativo and logado:\par
+      print('usuario ativo no sistema')\par
+elif ativo:\par
+      print('tudo pronto pra logar')\par
+else:\par
+      print('ative a conta no email')\par
+      \par
+para o and todas as variaveis q ele compara devem ser True\par
+para o or pelo menos uma variaveis deve ser True\par
+para o not o valor booleano \'e9 invertido\par
+\par
+ex: elif not logado:\par
+      print('o usuario est\'e1 off')\par
+por fim temos o is, que seria como uma pergunta dentro da computa\'e7\'e3o, podendo criar situa\'e7\'f5es dentro de blocos ou print\par
+print(ativo is True)\par
+diferente do if q pode ser usado pra condi\'e7oes, o is \'e9 usado pra verdadeiro ou falso como pergunta e n\'e3o como condi\'e7\'e3o\par
+e dentro do is podemos usar algumas com algumas modifica\'e7\'f5es usando a fun\'e7\'e3o dir pra saber oq pode ser feito\par
+a fun\'e7\'e3o dir(varivael) \'e9 todas as situa\'e7\'f5es q podem ser feitas com a variavel colocada dentro, e mostra a forma correta de escrita\par
+\par
+ativo = False\par
+logado = False\par
+\par
+if ativo and logado:\par
+      print('usuario ativo no system')\par
+elif ativo:\par
+      print('tudo pronto pra logar')\par
+elif not logado:\par
+      print('o usuario est\'e1 off')\par
+else:\par
+      print('ative a conta no email')\par
+\par
+\par
+***\par
+***\par
+loop for \'e9 algo repetir\'e1 todo o processo q est\'e1 dentro do bloco, e assim como a condicional se usa o : para iniciar o bloco, e tudo\par
+q estiver dentro do bloco repetira x vezes determinada pelo for, e normalmente trabalha com iter\'e1veis, ou seja, string, lista e range que tem um limite para qual\par
+o for pode achar um limite\par
+\par
+nome = 'geek universidade'\par
+lista = [1, 2, 3, 4]\par
+numeros = range(1, 10) #transformar em lista\par
+for letra in nome:\par
+      print(letra) #isso far\'e1 com que retorne uma letra e pular uma linha\par
+\par
+for number in lista:\par
+      print(number) #modo para lista\par
+\par
+for numero in range(1, 10):\par
+      print(numero)# modo range n precisa nem declarar antes, vc pode fazer dentro da pr\'f3pria condi\'e7\'e3o\par
+\par
+range n inclui a ultima posi\'e7\'e3o, come\'e7a no um e vai at\'e9 x - 1 "x valor total de lugares"\par
+\par
+para saber em qual posi\'e7\'e3o est\'e1 tal letra, ou saber oque o indice indica, o c\'f3digo para sabera posi\'e7\'e3o \'e9 for i, v in enumerate(nome).\par
+essa fun\'e7\'e3o dir\'e1 oque est\'e1 em cada posi\'e7\'e3o\par
+\par
+for _, letra in enumerate(nome):\par
+      print(letra)\par
+o underline serve pra vc descartar uma variavel q vc n quer usar, isso quer dizer q vc n utiliza espa\'e7o guardando coisa inutil pra vc\par
+\par
+outra forma de se utilizar o enumerate \'e9 com o for valor in enumerate(nome):\par
+      print(valor)\par
+\par
+para vc introduzir uma informa\'e7\'e3o vc utiliza o input, porem vc deve declarar o tipo q de dado esse usuario deve colocar\par
+ex: qtd = int(input("quantas vezes esse loop deve rodar?"))\par
+\par
+for n in range(1, qtd+1):\par
+      print(f'imprimendo \{n\}')#aqui vc deve colocar os valores, ou seja usar o movimento repetitivo para poder alocar lugares por toda string q vc criou\par
+      \par
+\par
+lembrando q por o range comer a ultima posi\'e7\'e3o, vc deve colcoar +1\par
+\par
+para vc poder imprimir sem pular linha vc deve utilizar, para evistar isso vc deve mudar o end, dando o valor de espa\'e7o ex: end=' '\par
+\par
+for letra in nome:\par
+      print(letra, end=' ')\par
+\par
+no python vc pode multiplicar a uma variavel ela sendo, char, int e entre outros, vc pode usar isso pra expamar emote por exemplo, porem para usar um emote vc deve pegar o c\'f3digo original\par
+e modificar para o c\'f3digo relacionado\par
+\par
+for num in range(1, 11):\par
+      print('\\U0001F60D' * num) imprimir\'e1 os emoji, para achar os emotis vc usa o timwhitlock\par
+      \par
+***\par
+***\par
+precisamos do loop for para usar ranges e precisamos de ranges para usar melhor o for, portanto eles se completam\par
+ranges s\'e3o para gerar sequ\'eancia numericas, n\'e3o aleatoria.\par
+range(valor de parada), lembrando q o valor de parada n\'e3o \'e9 inclusa, o in\'edcio pardr\'e3o \'e9 o 0 e pula de valor 1 em 1, isso quer dizer que o valor q ele ir\'e1 parar \'e9 #valor de parada - 1\par
+\par
+#forma 1\par
+\par
+for num in range(11):\par
+      print(num)\par
+\par
+#forma 2\par
+\par
+range(valor de inicio, valor de parada):\par
+\par
+fornum in range(1,11):\par
+      print(num)\par
+\par
+#forma 3\par
+\par
+for num in range(1, 10, 2): #o terceiro termo \'e9 para determinar o pulo do range\par
+      print(num)\par
+\par
+#forma 4 (inversa)\par
+\par
+range(valor inicio, valor de parada, passo)#esse \'e9 um pouco complicado, pois queremos a inversa, a ideia \'e9 a msm da normal porem, teremos que colocar valor inicio q ser\'e1 o maior, o valor q queremos parar e o valor de decremento\par
+\par
+outra utilidade de range \'e9 criar uma lista usando a fun\'e7\'e3o list(range(1,10)) e para poder ver essa lista temos que passar para uma variavel\par
+***\par
+***\par
+loop while forma geral \'e9 uma express\'e3o boobleana, ou seja, ela cria um bloco que repetira o processo at\'e9 que o while seje verdadeira\par
+\par
+ex\par
+numero = 1\par
+\par
+while numero < 10:\par
+      print(numero)\par
+      numero += 1\par
+\par
+temos q ter cuidado pra n criar um loop infinito, quando por exemplo vc esquece a aumentar a contante q existe dentro do while\par
+\par
+ex\par
+resposta = ''\par
+while resposta != 'sim':\par
+      resposta = input('vc tem um tempo pra ouvir a palavra de Deus \\n')\par
+***\par
+***\par
+saindo de loops com o break, ele funciona do msm modo de que em C, sair de loop de maneira projetada, ou seja, quanto algo acontecer sair desse loop\par
+um exemplo de utiliza\'e7\'e3o de break\par
+\par
+ex\par
+\par
+for numero in range(1, 11):\par
+      if numero == 6:\par
+            break\par
+      else: print(numero)\par
+      print('sai do loop')\par
+\par
+ex\par
+while True:\par
+      comando = input("digite 'sair' para sair \\n")\par
+      if comando == 'sair':\par
+            break\par
+***\par
+***\par
+do while - serve para vc rodar pelomenos uma vez o bloco de comando come\'e7ando pelo do e depois terminando com o while + condi\'e7\'e3o\par
+ex:\par
+do\{\par
+      comando = input("digite 'sair' para sair \\n")\par
+      if comando == 'sair':\par
+            break\par
+      \}while comando != 'sair'\par
+\par
+***\par
+cole\'e7\'e3o em python\par
+Lista - em python funciona como matriz(array), porem tem a vantagem do dinamismo e n\'e3o terem limita\'e7\'e3o para o tipo do dado, ou seja, qualquer tipo pode entrar dentro da lista\par
+\par
+Din\'e2mico - diferente de C por exemplo, temos que se um array \'e9 criado com 5 espa\'e7os e tipo int, ele s\'f3 aceitar\'e1 5 elementos e s\'f3 do tipo int, diferente de python q n\'e3o possui nd fixo, podendo add elementos infnitamente\par
+e \'e9 literalmente qualquer tipo de dado\par
+\par
+as lista dentro de python sempre est\'e1 entre []\par
+\par
+lista1 = [1, 2, 3, 4, 5, 1, 1]\par
+lista2 = ['a', 'b', 'c', 'd', 'e']\par
+lista3 = []\par
+lista4 = list(range(1,11))\par
+lista5 = list('geek universidade') # fica da mesmoa forma q a lista dois, ou seja, perda de tempo escrever separadamente\par
+\par
+as listas s\'e3o utilizadas para o r\'e1pida consulta dentro da lista\par
+if 8 in lista4:\par
+      print('achei')\par
+else:\par
+      print('n\'e3o achei')\par
+\par
+para poder ordenar uma lista usaremos o .sort(), ele vai ordenar instantaneamente\par
+ex:\par
+\par
+lista6 = [2,1,9,6,4]\par
+lista6.sort()\par
+print(lista6)\par
+\par
+pode ser usado tb para array de char, ou seja, pode usar todas as formas possiveis\par
+\par
+caso quisessemos contar quantas vezes tal elemento aparece dentro de uma lista usaremos o .count()\par
+print(lista1.count(1))\par
+e vai te informar o numero de insidencia\par
+\par
+podemos procurar lista dentro de outra lista, \'e9 bem diversificado\par
+\par
+existe duas formas de vc colocar novos valores a lista em python, a primeira \'e9 pelo append, qu pode ser usad para colocar um \'fanico term uma uma lista dentro de outra lista, veja que eu n coloquei varios unitarios pois o append n consegue fazer isso,\par
+para colocar varios de uma \'fanica vez deve-se usar o .extend, essa linha de c\'eddigo faz com que vc possa colocar uma lista de elementos de forma unitaria, isso quer dizer q vc n ter\'e1 q colocar separadamente, e ele n\'e3o \'e9 colocado como lista\par
+uma outra forma de adicionar como lista, \'e9 o .insert, esse c\'f3digo faz com q vc possa add um determinado termo em um local espec\'edfco voltando para o extend, temos uma op\'e7\'e3o muito legal q seria juntar duas listas, escrevendo da seguinte forma\par
+lista1.extend(lista2), esse c\'f3digo faz com que ele junte as duas listas.\par
+podemos invertes uma lista usando o c\'f3gido simples de lista.reverse() ou usando tb o c\'f3digo j\'e1 conhecido print(lista1[::]), s\'e3o duas forma que tem o mesmo fim\par
+\par
+temos fun\'e7\'e3o para copiar uma lista usando o .copy exemplo: lista6 = lista2.copy, para vc saber qual o tamanho da lista vc utiliza o len da seguinte forma print(len(lista5))\par
+reutilizando nossa velha amiga .pop, podemos tirar o ultimo termo das listas da seguinte forma lista5.pop, isso vai garantir q o ultimo ser\'e1 apagado e retornado usando o pop, podemos retira um elemento de uma posi\'e7\'e3o espec\'edfica usando o lista.pop(numero do local) e automaticamente ele pegar\'e1 todos os termos a sua direita e os deslocar\'e1 para a esquerda\par
+\par
+existe tambem uma forma de voc\'ea esvaziar toda a lista, para isso vc usa a fun\'e7\'e3o .clear  "lista.clear()"\par
+\par
+podemos tambem repetir facilmente a lista facilmente multiplicando a string, exemplo, caso vc tiver uma lista = [1,2,3] e multiplicar por dois vc tera lista = [1,2,3,1,2,3]\par
+\par
+usando o python tambem podemos fazer uma string virar uma lista usando a fun\'e7\'e3o .split() e isso far\'e1 uma lista das palavras q estar\'e3o na string\par
+ex: oi como vc est\'e1\par
+na string ficaria\par
+lista1 = ["oi", "como", "vc", "esta"]\par
+caso deixarmos claro q queremos outro separador precisamos colocalo dentro de split exempo lista.split(.), apartir disso ele separa por . e n mais por espa\'e7os\par
+\par
+podemos fazer tambem o processo inverso, f\'e1cilmente, usando a .join, tendo a lista de palavra ou qualquer outra coisa, colocamos a nova variavel\par
+ex: curso = ' '.join(lista1) o que est\'e1 entre aspas \'e9 oq ser\'e1 colocado entre os elementos da lista, ou seja podemos usar outras coisas como por exemplo\par
+ex: curso = '&'.join(lista1) isso faria ficar do seguinte modo oi&como&vc&esta\par
+\par
+for elemento in lista1:\par
+      print(elemento)\par
+\par
+essa formula vc ter\'e1 cada uma dos elemento dentro da lista at\'e9 acabar.\par
+\par
+vamos fazer um exemplo com o while para ter como compara\'e7\'e3o\par
+\par
+while produto != 'sair':\par
+      print("adicione um produto na lista ou digite 'sair' para sair: \\n ")\par
+      produto = input()\par
+      if produto != 'sair':\par
+            carrinho.append(produto)\par
+\par
+for produto in carrinho:\par
+      print(produto)\par
+\par
+dentro de lista podemos f\'e1cilmente colocar variaveis dentro dela sem o menor problema, \'e9 f\'e1cil e r\'e1pido.\par
+ex:\par
+      num1 = 1\par
+      num2 = 2\par
+      num3 = 3\par
+\par
+      lista1 = [num1. num2, num3]\par
+\par
+ser\'e1 printado os numeros das variaveis. outra coisa q podemos fazer dentro de lista, \'e9 poder printar de forma indexada, ou seja, ir por posi\'e7\'e3o ex\par
+cores = ["azul", "amarelo", "verde"]\par
+\par
+print(cores[1]), neste momento ele imprimir\'e1 a cor amarela q est\'e1 na posi\'e7\'e3o 0 + 1, podemos fazer isso ao contrario caso vc coloque valor negativo de forma indexada come\'e7ando pelo -1 q no caso \'e9 o ultimo\par
+\par
+slicing \'e9 na verdade for para string, por exemplo, temos a lista = [1, 2, 3, 4], ent\'e3o quando vc for manipular a string vc digita lista[de onde quer come\'e7ar: at\'e9 onde ir: de quanto vc quer pular] e \'e9 assim q vc trabalha com slicing\par
+caso colocar um valor negativo, vai ocorrer o valor inverso, assim como os outros tratamentos de string\par
+por fim temos umas fun\'e7\'f5es b\'e1sicas, sum(soma) max(m\'e1ximo) min(m\'ednimo) len(tamanho da lista)\par
+print(sum(lista))\par
+print(max(lista))\par
+print(min(lista))\par
+print(len(lista))\par
+\par
+podemos torna a lista em uma tupla com um c\'f3digo muito simples, q \'e9 o .tuple e na digitaliza\'e7\'e3o \'e9 tupla = tuple(lista)\par
+\par
+para poder desempacotar a lista sem problemas, teremos que ter o numeros de varias == a o numero de elementos da lista\par
+***\par
+***\par
+\par
+tuplas- finalmente vamos falar sobre tuplas, q j\'e1 fora mensionada anteriormente, no python \'e9 chamado de tuple, tuplas s\'e3o quase q listas com duas diferen\'e7as\par
+\par
+1- tuplas s\'e3o representadas com ()\par
+\par
+2- tuplas s\'e3o imutaveis, isso significa que n\'e3o muda por nd,ent\'e3o quando vc faz alguma opera\'e7\'e3o na verdade vc est\'e1 a criar outra lista,\par
+\par
+ex de tupla\par
+\par
+tupla1 = (1, 2, 3 ,4 ,5 ,6)\par
+          print (tupla)\par
+\par
+outra forma de escrever uma tupla \'e9 o seguinte\par
+tupla2 = 1, 2, 3, 4, 5\par
+\par
+print(type(tupla2))\par
+\par
+pra escrever tuplas com 1 elemento vc deve colocar uma ',' depois elemento caso n coloque ser\'e1 entendido como int\par
+\par
+a fun\'e7\'e3o range n muda em nada, pode ser usada da msm forma em tupla\par
+\par
+desempacotamento de tupla tem as msm restri\'e7\'f5es em, ou seja, precisa ter um n\'famero = de termos e de variaveis para recebelas\par
+      tupla = ('a', 'b')\par
+\par
+\par
+tem outras funcionalidades parecidas com a lista, por exemplo, quando tem mais de um elemento igual, retornar\'e1 a posi\'e7\'e3o do primeiro, print(meses.index('junho'))\par
+\par
+slicing - tuple[inicio:fim:passo], vemos que estamos tratando tuple como list\par
+\par
+outros motivos para a utiliza\'e7\'e3o de tuple\par
+1 - tuple s\'e3o mais r\'e1pidas q lista para\par
+2 - tuple s\'e3o mais seguros\par
+\par
+copiando tuple para outra\par
+tupla = (1, 2, 3)\par
+nova  = tupla\par
+print(nova)\par
+print(tupla)\par
+\par
+\'e9 assim q copia tupla.\par
+\par
+***\par
+\par
+dicionarios s\'e3o cole\'e7\'f5es de palavras do tipo chave/valor, caso voce use print(type(\{\})) em um dicionario, ter\'e1 um retorno de dic\par
+\par
+para criar um dicionario vc deve escrever dessa seguinte forma.\par
+paises = \{'br':'brasil'\} aqui eu deixei claro q br \'e9 chave para brasil, ou seja, se eu escrever br aparecer\'e1 brasil\par
+e deve ser escrito dessa forma, sendo separado por :, e o dicionario n tem limite de cahves, ou seja, pode ter muito mais do q apenas 1\par
+caso vc escreva uma chave q n exista no dicionario, dar\'e1 um erro de keyError, quer dizer q n dar\'e1 certo, outra forma de escrever \'e9 usando o get da seguinte forma\par
+print(paises.get('ru')) - nesse caso vai retornar None, n vai dar erro porem dar\'e1 None, None \'e9 na verdade um tipo sem tipo.\par
+podemos fazer um tratamento para procurar uma chave no dicionario usado, escrevendo a linha de c\'f3digo\par
+paises = \{'br' = 'brasil'\}\par
+      pais = paises.get('ru')\par
+\par
+if russia:\par
+      print('encontrei o pais')\par
+else:\par
+      print('n\'e3o encontrei o pais')\par
+\par
+essa simples linha de c\'f3digo alem de informar se o item procurado est\'e1 ou n est\'e1 no dicionario do programa tambem previne erros\par
+\par
+outra forma de usar o get seria para trocar o valor caso algo n aconte\'e7a por exemplo\par
+pais = paises.get('py' : 'n\'e3o encontrado')\par
+e com isso podemos usar apenas um print q eria o print(f'encontrei o pais \{paises\}')\par
+normalmente dicionarios s\'e3o usadas como chave de dicionario pois s\'e3o imutaveis\par
+Formas de adicionar chaves dentro do dicion\'e1rio, a primeira \'e9 bem simples vc escreve dicionario['chave'] = x\par
+para ex: receita['abril'] = 500\par
+\par
+segunda forma \'e9 novo_dado = \{'mai':600\}\par
+receita.update(novo_dado)\par
+\par
+usando essa msm tecnica podemos tambem fazer atualiza\'e7\'f5es ex:\par
+      primeira forma\par
+            receita['mai'] = 550\par
+\par
+vemos que atualiza\'e7\'e3o = insers\'e3o de termos, com isso temos que entender tambem quem n podemos ter chaves repetidas\par
+\par
+para retirar um objeto temos algumas formas, a primeira \'e9 a fun\'e7\'e3o j\'e1 conhecida o .pop q retira e retorna\par
+a outra forma \'e9 o del, ele deletar\'e1 o elemento exemplo:\par
+      del receita['fev']\par
+\par
+a diferen\'e7a com o .pop e q n tem o valor retornado\par
+\par
+nos usamos dicionario principalmente para compras online, pois podemos carregar varias informa\'e7\'f5es com um termo e a facilidade de tirar e colocar termos \'e9 muito ben\'e9fico para os programadores\par
+como funcionaria na pr\'e1tica:\par
+      produto1 = ['xbox', 1, 2300]\par
+      produto2 = ['god of war', 1, 150]\par
+carrinho = (produto1, produto2)\par
+\par
+print(carrinho)\par
+\par
+forma de lista, agora na forma dicionario ficaria assim\par
+\par
+produto1 = \{'nome': 'play 4', 'quantidade': 1, 'preco':1500\}\par
+produto2 = \{'nome': 'god 4', 'quantidade': 1, 'preco':230\}\par
+\par
+carrinho.append(produto1)\par
+carrinho.append(produto2)\par
+\par
+formas menos importantes\par
+.clear = limpa o dicionario\par
+.copy = copia o dicionario\par
+.fromkeys = ('a','b') = ele cria uma nova chave objeto dentro do dicionario, lembrando q nesse m\'e9todo, o ultimo termo, preenche todos os outros\par
+\par
+***\par
+mapas - os mapas tambem s\'e3o conhecidos como dicionarios representados por chave.\par
+aqui veremos como interar sobre dicionarios ex:\par
+      for chave in receita:\par
+            print(chave)\par
+      for chave in receita:\par
+            print(receita[cahve])\par
+\par
+a diferen\'e7a entre essas duas formas \'e9 que o primeiro printa as chaves e no segundo printa o valor delas\par
+a forma mais correta seria\par
+for chave in receita.keys():\par
+      print(chave)\par
+\'e9 igual a primeira forma s\'f3 que em formato de python\par
+for cahve in receita.values():\par
+      print(valor)\par
+a forma correta para printar os valor das chaves\par
+\par
+podemos algumas opera\'e7\'f5es matem\'e1ticas, para soma max min e o tamanhodo dicionario da seguinte forma\par
+print(sum(receita.values())) // soma\par
+print(max(receita.values())) // m\'e1ximo\par
+print(min(receita.values())) // m\'ednimo\par
+print(len(receita)) // tamanho do dicionario\par
+***\par
+***\par
+conjunto \'e9 refencia \'e1 conjuntos matem\'e1ticos, no python conjunto s\'e3o chamados de Sets, sets n\'e3o tem valores duplicados ou ordenados\par
+os elementos n\'e3o s\'e3o acessados por indice, isso significa que n\'e3o s\'e3o indexados, oque d\'e1 margem de utiliza\'e7\'e3o em situa\'e7\'f5es em que n\'e3o tem preocupa\'e7\'e3o de chaves, valores ou itens duplicados\par
+conjuntos assim como mapas, s\'e3o usados entre \{\}\par
+a diferen\'e7a entre mapas (dicionario) e conjuntos (set)\par
+      dicionario tem chave/valor\par
+      conjunto \'e9 apenas valor\par
+a forma de se decarar \'e9 o seguinte\par
+s = set(\{1, 2, 3, 4, 4)\} # repare nos valores repetidos, vemos que quando \'e1 valores repetidos eles, s\'e3o ignorados\par
+\par
+importante: alem n\'e3o ter duplica\'e7\'e3o, n\'e3o se tem ordena\'e7\'e3o\par
+s = \{99, 2, 34, 12, 1, 44\}\par
+diferente das tuplas e listas\par
+\par
+assim como em todo python, pode se usar qualquer valor dentro desse conjunto\par
+s = \{1, 'b', True, 34.22, 44\}\par
+\par
+diferente das tuplas, nos conjuntos existe a possibilidade de adicionar elementos, caso ele seje diferente dos elementos j\'e1 iniciado, e existe a possibilidade de remo\'e7\'e3o\par
+s.add(4) // para adicionar\par
+s.discard(22) //ir\'e1 descartar sem retornar o valor caso ele exista no conjunto\par
+shallow copy - funciona como ponteiro de C, caso vc coloque uma variavel = a um conjunto e vc altera um deles, alterar\'e1 ambas\par
+novo = s\par
+novo.add(4) // vai add 4 em ambas os conjuntos\par
+para limpar um conjunto vc utiliza .clear() ex:\par
+      s.clear()\par
+podemos gerar 1 terceiro conjunto que interceda os outros dois conjuntos, um exemplo seria saber quais estudantes estudam duas coisas ao mesmo tempo vc utilizaria union ex:\par
+      unicos1 = estudantePython.union(estudantesJava)\par
+vai juntar os q existem em ambas as listas\par
+outra forma de escrever esse c\'f3digo seria usando o pipe\par
+      unicos2 = estudantesPython | estudantesJava\par
+caso queria os diferentes podemos usar o .difference ex:\par
+      soPython - estudantesPython.difference(estudantes.Java)\par
+vai guardar em soPython os que existe SOMENTE no conjunto de estudantes de Python\par
+***\par
+***\par
+counter, \'e9 um conteiner de alta performace, ou seja, conjunto de informa\'e7\'f5es\par
+counter seria contador, ele recebe um inter\'e1vel e cria um objeto collections counter que \'e9 semelhante ao dicion\'e1rio, porem a chave \'e9 o elemento passado por parametro e o valor seria \'e9 a quantidade de ocorrencia desse mesmo\par
+ex:\par
+form collections import Counter // lembrando que tem q importar a biblioteca para poder funcionar\par
+lista = [1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4] #lembrando que contanto que seja interavel, ele pode ser inserido na lista\par
+      \par
+res = counter(lista)\par
+print(type(res))\par
+print(res)\par
+\par
+print(Couter('geek university')) // aqui ele retornar\'e1 o valor de cada letra Counter(\{'e': 3, 'i': 2, 'g': 1, 'k': 1, ' ': 1, 'u': 1, 'n': 1, 'v': 1, 'r': 1, 's': 1, 't': 1, 'y': 1\})\par
+\par
+caso voce queira que contar a quantidade de palavras voce poderia fazer o seguinte\par
+texto = """bla bla bla bla"""\par
+palavras = texto.split() // aqui esperar\'e1 em palavra e n\'e3o em letras igual o exemplo anterior\par
+res = Counter(palavras)\par
+print(res)// retornar\'e1 a quantidade de vezes que voce repetiu cada palavra\par
+print(res.most_common(5))//essa fun\'e7\'e3o vai te retornar X elementos q mais se repete, q pode ser separ\'e1do em palavra ou letras\par
+***\par
+***\par
+Default dict - quando usamos default dict na cria\'e7\'e3o do nosso dicionario ele, voce ter\'e1 um valor pra chaves sem valor definido e para chaves que n\'e3o exite, nesse caso ele criar\'e1 a chave com esse valor definido no default\par
+form collections import defaultdict // biblioteca para a utiliza\'e7\'f5es de default\par
+dicionario = defaultdict(lambda: 0)\par
+dicionario = \{'curso': 'programa\'e7\'e3o em python:essencial'\}\par
+print(dicionario)\par
+print(dicionario['curso'])\par
+print(dicionario)\par
+print(dicionario['outro'])\par
+print(dicionario)\par
+***\par
+***\par
+fun\'e7\'f5es em python\par
+definindo fun\'e7\'f5es, pequenos programas que fazer certas tarefas e evitar repeti\'e7\'e3o de c\'f3digo atoa, j\'e1 usamos algumas fun\'e7\'f5es que vem prontas no python, porem agora podemos criar as nossas.\par
+normalmente a contru\'e7\'e3o da fun\'e7\'e3o \'e9 o seguinte\par
+def nomeDaFun\'e7\'e3o(parametros de entrada):\par
+\tab fun\'e7\'e3o em si\par
+\tab nome sempre em letras minusculas\par
+\tab parametros de entrada \'e9 opcional, s\'f3 \'e9 usado caso precise de alguma informa\'e7\'e3o da fun\'e7\'e3o principal\par
+\tab e o bloco da fun\'e7\'e3o \'e9 o programa q far\'e1 algo necessario q a principal necessita\par
+abrimos o bloco usando o dois ponto e na linha de baixo o TAB. ex\par
+def dizOi():\par
+\tab print('oi!') // dentro de uma fun\'e7\'e3o podemos usar outras fun\'e7\'f5es\par
+para utilizar ela, devemos chamar ela na main, ou fora da def, para chamar temos q usar o nome da fun\'e7\'e3o mais as chaves com as inform\'e7\'f5es corretas\par
+e a fun\'e7\'e3o ser\'e1 efetivada para kd vez que vc a chamar, podemos criar dentro da fun\'e7\'e3o uma retornar ela como valor para uma variavel, porem ninguem usa\par
+***\par
+***\par
+fun\'e7\'f5es com retorno\par
+as fun\'e7\'f5es que fizemos at\'e9 o momento n\'e3o tem retorno algum apartir de agora vamos retornar algumas coisas, isso quer dizer q as fun\'e7\'f5es v\'e3o passar o return como valores, e n precisa necessariamente passar diretamente para uma variavel, ela pode ser usada diretamente em um if ou em um print ou algo parecido, usando at\'e9 em outra fun\'e7\'e3o\par
+def diz_oi():\par
+      return 'oi'\par
+\par
+print(diz_oi())\par
+nesse exemplo, passa direto no print\par
+porem isso ocorre apenas se for return, caso for um print ele dar\'e1 erro pois n\'e3o \'e9 um retorno\par
+obs: return finaliza a fun\'e7\'e3o, ele n precisa ser \'fanico dentro da fun\'e7\'e3o, pode ter uma por situa\'e7\'e3o, e dentro dela podemos retornar qualquer tipo de dado, outros detalhe \'e9 que a ordem dos parametros importa, ou seja, se vc passar um int e string mas o certo seria string int, nessa situa\'e7\'e3o ocorrer\'e1 um problema n caso ser\'e1 trocado as informa\'e7\'f5es, e isso pode trazer  varios problemas \par
+vc pode retornar tambem frases fazendo da seguinte forma  f'isso \'e9 um retorno' \par
+***\par
+***\par
+par\'e2metro padr\'e3o\par
+s\'e3o fun\'e7\'f5es onde a passagem de par\'e2metro seja opcional,  um exemplo seria\par
+print('geek university')\par
+print()\par
+o print \'e9 par\'e2metro padr\'e3o, pois \'e9 opcional, isso quer dizer q  n \'e3o dar\'e1 problema caso n\'e3o tenha.\par
+fun\'e7\'f5es normais caso tente fazer isso dar\'e1 erro typeerror, pois falta variavel\par
+para poder criar uma fun\'e7\'e3o padr\'e3o, vc deve colocar fazer uma modifica\'e7\'e3o na entrada da fun\'e7\'e3o:\par
+\ul fun\'e7\'e3o normal\ulnone\par
+def exponencial(numero, potencia):\par
+return numero ** potencia\par
+\ul fun\'e7\'e3o padr\'e3o \par
+\ulnone /*existe uma regra muito importante, variaveis com valores padr\'e3o n\'e3o pode vir a esquerda, deve ser pela direita, sempre os ultimos*/\ul\par
+\ulnone def exponencial(numero, porencia=4): /*vemos que o igual faz com que caso n\'e3o tenha valor ele atribuir\'e1 o valor que  est\'e1 ap\'f3s o o igual na variavel em quest\'e3o*/\par
+return numero ** potencia\par
+\par
+forma mais complexa de uso:\par
+def mostrarInformacao(nome='geek', instrutor=False):\par
+\tab if nome == 'geek' and instrutor:\par
+\tab\tab return 'bem vindo instrutor geek'\par
+\tab elif nome == 'geek':\par
+\tab\tab return'pensei que vc era instrutor'\par
+return f'ol\'e1 \{nome\}'\par
+\par
+mas a grande vantagem de usar defout \'e9 evitar erros que existem, no caso seria os erros de falta de termos, ou termos errados. \par
+podemos usar outras fun\'e7\'f5es como par\'e2metros dentro de uma fun\'e7\'e3o \par
+exemplo:\par
+\tab def soma (nom1,  nom2):\par
+\tab\tab return nom1 + nom2\par
+escopo - evitar problemas : \par
+\tab variaveis globais e variaveis locais:\par
+\tab\tab intrutor = 'geek'\par
+\tab\tab def fiz_oi():\par
+\tab\tab\tab intrutor = 'python' \par
+\tab\tab\tab return f'oi \{instrutor\}'\par
+ vemos que  as variaveis locais tem maior hierarquia que as variaveis globais, DICA: se possivel, evitar de usar variavel global.\par
+podemos avisar para a fun\'e7\'e3o usar a variavel global fazendo do seguinte modo\par
+intrutor = 'geek'\par
+\tab\tab def fiz_oi():\par
+\tab\tab\tab intrutor = 'python' \par
+\tab\tab\tab return f'oi \{global instrutor\}'\par
+por fim podemos criar uma fun\'e7\'e3o dentro de outra fun\'e7\'e3o, ela ficaria da seguinte forma:\par
+\tab def fora():\par
+\tab\tab def dentro():\par
+\tab\tab\tab nonlolcal contador\par
+\tab\tab\tab contador = contador + 1\par
+\tab\tab\tab return contador\par
+\tab\tab return dentro()\par
+***                                                  \par
+***\par
+docstring - \'e9 um comentario, string para documenta\'e7\'e3o, ela n\'e3o faz parte da leitura do c\'f3digo, porem auxilia no entendimento do c\'f3digo.\par
+e para chamar essa documenta\'e7\'e3o \'e9 s\'f3 usar o no me da fun\'e7\'e3o.___doc___ ex:\par
+aoquadrado.___doc___\par
+***               \par
+}
+ 

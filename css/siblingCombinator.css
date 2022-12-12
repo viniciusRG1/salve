@@ -1,0 +1,17 @@
+/*
+    procura irmãos direto, ou seja, o primeiro irmão que aparecer
+     EX:
+        h1 + p{
+            color: red;
+        }
+    
+    nesse caso procurará h1 onde seu primeiro irmão seja um p´
+
+    existe uma forma de selhecionar todos os irmãos disponiveis
+     EX:
+        h1 - p{
+            color: red;
+        }
+    
+    isso irá colorir todos os irmãos p de h1
+*/

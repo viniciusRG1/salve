@@ -1,0 +1,269 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\ul\f0\fs44\lang22 CSS\par
+AULA 1\par
+\ulnone\fs22 inline style - estilo na linha\par
+internal style sheet - estilo no c\'f3digo\par
+external style sheet - estilo vindo de outro programa \par
+
+\pard\sa200\sl276\slmult1\tx1136\ul\fs44 inline style\par
+\ulnone\fs22 <!DOCTYPE html>\par
+<html>\par
+<head>\par
+\tab <meta charset="utf-8">\par
+\tab <meta name="viewport" content="width=device-width, initial-scale=1">\par
+\tab <title>inline style</title>\par
+\par
+\tab\par
+\par
+</head>\par
+<body>\par
+\tab <h1 style="color: red;">estilo CSS</h1>\par
+\tab <p style="color: greenyellow;">\par
+\tab\tab Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\par
+\tab </p>\par
+\tab <p>\par
+\tab\tab Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\par
+\tab </p>\par
+</body>\par
+</html>\par
+\par
+---------------------------------------------------------------------------------------------------------------------------\par
+podemos criar um seletor, que seria semelhante a uma fun\'e7\'e3o em C definidos no head\par
+lembrando que o seletor deve ser alguma tag existente como p ou h1, mudar\'e1 todas as partes q se utilizarem dessas tags\par
+<!DOCTYPE html>\par
+<html>\par
+<head>\par
+\tab <meta charset="utf-8">\par
+\tab <meta name="viewport" content="width=device-width, initial-scale=1">\par
+\tab <title>inline style</title>\par
+\par
+\tab <style type="text/css">\par
+\tab\tab p \{  <!-- seletor \'e9 a tag <p> -->\par
+\tab\tab\tab color:  blue;\par
+\tab\tab\}\par
+\par
+\tab\tab h1 \{  <!-- seletor \'e9 a tag <h1> -->\par
+\tab\tab\tab color:  orangered;\par
+\tab\tab\}\par
+\tab </style>\par
+\par
+</head>\par
+<body>\par
+\tab <h1 style="color: red;">estilo CSS</h1>\par
+\tab <p >\par
+\tab\tab Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\par
+\tab </p>\par
+\tab <p>\par
+\tab\tab Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\par
+\tab </p>\par
+</body>\par
+</html>\par
+\ul\fs44 aula 2\ulnone\fs22\par
+id - nome, vc pode utilizar apenas uma vez por programa, pois serve para chamar uma situa\'e7\'e3o espec\'edfica, seria como uma fun\'e7\'e3o espec\'edfica\par
+classe - \'e9 um conjunto, onde varios elementos podem participar dela, ela serve para uma exe\'e7\'e3o mais recorente, fun\'e7\'e3o usada em algumas situa\'e7\'f5es\par
+<!DOCTYPE html>\par
+<html>\par
+<head>\par
+\tab <meta charset="utf-8">\par
+\tab <meta name="viewport" content="width=device-width, initial-scale=1">\par
+\tab <title>classes_ids</title>\par
+\tab <style type="text/css">\par
+\tab\tab p \{ \par
+\tab\tab\tab color:  green;\par
+\tab\tab\}\par
+\par
+\tab\tab h1 \{\par
+\tab\tab\tab color:  orangered;\par
+\tab\tab\}\par
+\tab\tab .azul\{\par
+\tab\tab\tab color:  blue;\par
+\tab\tab\}\par
+\tab\tab #principal\{\par
+\tab\tab\tab background: gray;\par
+\tab\tab\}\par
+\tab </style>\par
+</head>\par
+<body id="principal">\par
+<h1 style="color: red;">estilo CSS</h1>\par
+\tab <div>\par
+\tab\tab <div id="cabecalho">\par
+\tab\tab\tab <img src="imagens/logo.png">\par
+\tab\tab\tab <ul>\par
+\tab\tab\tab\tab <li>home</li>\par
+\tab\tab\tab </ul>\tab\tab\par
+\tab\tab </div>\par
+\tab </div>\par
+\tab <p >\par
+\tab\tab Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\par
+\tab </p>\par
+\tab <p class="azul">\par
+\tab\tab Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\par
+\tab </p>\par
+</body>\par
+</html>\ul\fs44\par
+aula 3\par
+\ulnone\fs22 <!DOCTYPE html>\par
+<html>\par
+<head>\par
+\tab <meta charset="utf-8">\par
+\tab <meta name="viewport" content="width=device-width, initial-scale=1">\par
+\tab <title>aula 3</title>\par
+ <style type="text/css">\par
+ \tab #conteudo \{\par
+ \tab\tab background:  darkblue;\par
+ \tab\}\par
+\par
+ \tab #topo \{\par
+ \tab\tab background: rebeccapurple;\par
+ \tab\}\par
+\par
+ \tab .produtos \{\par
+ \tab\tab background: greenyellow;\par
+ \tab\tab margin: 10px;\par
+ \tab\}\par
+\par
+ \tab #rodape\{\par
+ \tab\tab background: pink;\par
+ \tab\}\par
+ \tab #assinatura\{\par
+ \tab\tab background: yellow;\par
+ \tab\}\par
+ </style>\par
+</head>\par
+<body>\par
+<div id="topo">\par
+\tab <img src="imagens para as aulas/logo.png">\par
+\tab <ul>\par
+\tab\tab <li>home</li>\par
+\tab\tab <li>produtos</li>\par
+\tab\tab <li>contatos</li>\par
+\tab </ul>\par
+</div>\par
+<!-- div \'e9 um contenier, como se tive-se sempre em 100% da tela, e n\'e3o divide a lateral com nenhum outro bloco, q d\'e1 a pssibilidade de alterar outras coisas dentro da div, detalhe que qualquer altera\'e7\'e3o no estilo da div, mudar\'e1 toda e n\'e3o s\'f3 uma parte espec\'edfica-->\par
+<div id="conteudo">\par
+\tab <div class="produtos">produto 1</div>\par
+\tab <div class="produtos">produto 2</div>\par
+\tab <div class="produtos">produto 3</div>\par
+</div>\par
+<div id="rodape">\par
+\tab direitos reservados\par
+</div>\par
+<!-- span \'e9 muito parecido com a div, porem ele faz edi\'e7\'f5es SOMENTE na parte q ele engloba e n\'e3o \'e9 um contenier, isso quer dizer que ele pode facilmente dividir as laterais com outros blocos de comando, \'e9 mais recomendade de utilizar do que o <p> por exemplo-->\par
+\par
+\tab <span id="assinatura">\par
+\tab\tab vinicius\par
+\tab </span>\par
+\tab <span>garcia</span>\par
+</body>\par
+</html>\par
+\par
+\ul\fs44 aula 4\par
+\ulnone\fs22 <!-- como alterar a borda com estilo css -->\par
+bordas de css\par
+dotted - Defines a dotted border\par
+dashed - Defines a dashed border\par
+solid - Defines a solid border\par
+double - Defines a double border\par
+groove - Defines a 3D grooved border. The effect depends on the border-color value\par
+ridge - Defines a 3D ridged border. The effect depends on the border-color value\par
+inset - Defines a 3D inset border. The effect depends on the border-color value\par
+outset - Defines a 3D outset border. The effect depends on the border-color value\par
+none - Defines no border\par
+hidden - Defines a hidden border, esconde a borda\par
+\par
+<!DOCTYPE html>\par
+<html>\par
+<head>\par
+\tab <meta charset="utf-8">\par
+\tab <meta name="viewport" content="width=device-width, initial-scale=1">\par
+\tab <title>aula 4</title>\par
+\tab <style type="text/css">\par
+\tab\tab #conteudo\{\par
+\tab\tab\tab /*border: 10px solid blueviolet;*/\par
+\tab\tab\tab border-color:  red green yellow blue;/* dessa forma podemos editar cada lado separadamente, olhando para formahor\'e1ria */\par
+\tab\tab\tab border-width: 15px 10px 8px 3 px;/* funciona do mesmo modo que o anterior */\par
+\tab\tab\tab border-style: solid double;/*n\'e3o precisa colocar 1 ou 4 termos, pode-se colocar apenas 2 e eles se alternaram, para completar o seu objetivo*/\par
+\tab\tab\}\par
+\tab </style>\par
+</head>\par
+<body>\par
+<div id="conteudo">\par
+\tab bordas<br>\par
+\tab bordas<br>\par
+\tab bordas<br>\par
+</div>\par
+</body>\par
+</html>\par
+\ul\fs44\par
+aula 5\par
+\ulnone\fs22 <!DOCTYPE html>\par
+<html>\par
+<head>\par
+\tab <meta charset="utf-8">\par
+\tab <meta name="viewport" content="width=device-width, initial-scale=1">\par
+\tab <title>aula 6</title>\par
+\tab <style type="text/css">\par
+\tab\tab body\{\par
+\tab\tab\tab /* normalmente \'e9 definido um tamanho em px para ser o padr\'e3o e vmaos definindo as outras fontes utilizando 'em'*/\par
+\tab\tab\tab font-size: 30px;\par
+\tab\tab\}\par
+\tab\tab .texto\{\par
+\tab\tab font-size: 20px;\par
+\tab\}/* % porcento da telo\par
+\tab\tab 'em' \'e9 a porcentagem do conteiner */\par
+\tab </style>\par
+</head>\par
+<body>\par
+\tab <div>\par
+\tab <p class="texto"></p>\tab\par
+\tab </div>\par
+\tab\par
+</body>\par
+</html>\par
+\ul\fs44 aula 6\par
+\ulnone\fs22 <!DOCTYPE html>\par
+<html>\par
+<head>\par
+\tab <meta charset="utf-8">\par
+\tab <meta name="viewport" content="width=device-width, initial-scale=1">\par
+\tab <title>aula 6</title>\par
+\tab <style type="text/css">\par
+\tab\tab body\{\par
+\tab\tab\tab /* normalmente \'e9 definido um tamanho em px para ser o padr\'e3o e vmaos definindo as outras fontes utilizando 'em'*/\par
+\tab\tab\tab font-size: 30px;\par
+\tab\tab\tab font-family: sans-serif;\par
+\tab\tab\}\par
+\tab\tab .negrito\{\par
+\tab\tab\tab font-weight: bold;\par
+\tab\tab\tab /*podemos usar n\'fameros para controlar sendo 100 pra mais baixa, e 900 pra mais pesada*/\par
+\tab\tab\}\par
+\tab\tab .italico\{\par
+\tab\tab\tab font-style: italic;\par
+\tab\tab\}/*coloca o efeito italico*/\par
+\tab\tab\par
+\tab\tab .formatacao\{\par
+\tab\tab\tab /*\par
+\tab\tab\tab text-decoration:  underline;\par
+\tab\tab\tab text-decoration:  overline;\par
+\tab\tab\tab */\par
+\tab\tab\tab text-decoration: line-through;\par
+\tab\tab\tab /*o primeiro risco abaixo da palavra, o segundo acima da palavra e o terceiro risca a palavra*/\par
+\tab\tab\}\par
+\par
+\tab </style>\par
+</head>\par
+<body>\par
+\tab <div>\par
+\tab <p class="negrito">exato</p>\par
+\tab <p class="formatacao">exato</p>\par
+\tab <p class="italico">exato</p>\tab\par
+\tab </div>\par
+\tab\par
+</body>\par
+</html>\par
+\ul\fs44 aula 7\par
+\ulnone\fs22\par
+\par
+}
+ 

@@ -1,0 +1,12 @@
+/*
+    essa formatação serve para que você possa escolher em qual ocorrencia você vai modificar, oque elimina algumas dificuldades impostas pelos outras formatações
+    nesse modo em especial podemos escolher apartir da posição em relações a outros do mesmo tipo, então você teria que contar apenas os da tag escolhida 
+    
+    EX:
+        article p:nth-last-of-type(2){
+            font-weight: bold;
+            font-size:18px;
+        }
+
+    aqui vemos que dentre as tag p, ele modificará a segunda aparição.
+*/

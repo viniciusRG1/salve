@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>aula 3</title>
+ <style type="text/css">
+ 	#conteudo {
+ 		background:  darkblue;
+ 	}
+
+ 	#topo {
+ 		background: rebeccapurple;
+ 	}
+
+ 	.produtos {
+ 		background: greenyellow;
+ 		margin: 10px;
+ 	}
+
+ 	#rodape{
+ 		background: pink;
+ 	}
+ 	#assinatura{
+ 		background: yellow;
+ 	}
+ </style>
+</head>
+<body>
+<div id="topo">
+	<img src="imagens para as aulas/logo.png">
+	<ul>
+		<li>home</li>
+		<li>produtos</li>
+		<li>contatos</li>
+	</ul>
+</div>
+<!-- div é um contenier, como se tive-se sempre em 100% da tela, e não divide a lateral com nenhum outro bloco, q dá a pssibilidade de alterar outras coisas dentro da div, detalhe que qualquer alteração no estilo da div, mudará toda e não só uma parte específica-->
+<div id="conteudo">
+	<div class="produtos">produto 1</div>
+	<div class="produtos">produto 2</div>
+	<div class="produtos">produto 3</div>
+</div>
+<div id="rodape">
+	direitos reservados
+</div>
+<!-- span é muito parecido com a div, porem ele faz edições SOMENTE na parte q ele engloba e não é um contenier, isso quer dizer que ele pode facilmente dividir as laterais com outros blocos de comando, é mais recomendade de utilizar do que o <p> por exemplo-->
+
+	<span id="assinatura">
+		vinicius
+	</span>
+	<span>garcia</span>
+</body>
+</html>

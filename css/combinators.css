@@ -1,0 +1,11 @@
+/*
+    no combinators podemos reunir varias tag para que se caso todas forem verdade, executar o script
+
+    EX:
+        body articles h2{
+            color: red;
+        }
+
+    nesse exemplo o script irá procurar no body se existe algum articles e se dentro desse articles tem um h2 e caso exista mudará o texto dentro desse h2 para vermelho 
+    usando essa lógica mesmo que tenha outras tag no meio, ele procurará por esse padrão 
+*/

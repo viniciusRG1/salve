@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>aula 4</title>
+</head>
+<body>
+	<!-- em resumo table é instanciar a tabela
+		tr é linha 
+		td é coluna 
+		th é cabeçalho de tabela, é só para destacar o significado dos dados da colunas
+	-->
+
+	<table border="2">
+		<tr><!-- incorpotação da informaçã linha da tabela-->
+			<td>aa</td> <!-- dados da tabela -->
+		</tr>
+		<tr>
+			<td>bb</td>
+		</tr>
+	</table>
+	<table border="2" width="400"> <!-- quando vc define largura apenas número ela é colocada em pixel que é fixo, caso coloque porcentagem, ela será baseada em na área total que esteja aberta-->
+		<tr>
+			<td>aa</td> <!--podemos usar width em porcentagem com imagens-->
+			<td>xx</td><!--podemos usar tambem links nas listas-->
+			<td>ff</td>
+		</tr>
+		<tr>
+			<td>bb</td> <!-- caso não tenha o número total igual de <td>s ela ficará vaga -->
+		</tr>
+		<tr>
+			<td colspan="3">bb</td> <!-- a parte vazia pode ser preenchido caso voce coloque no <td> colspan="x" sendo x o tamanho q vc quer -->
+		</tr>
+		<tr>
+			<td rowspan ="3">bb</td> <!-- a diferença entre colspan e rowspan é que o rowspan é mais linhas preenchidas e colspan é mais colunas preenchidas -->
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,27 @@
+/*
+    é uma modificação que é feita diretamente nos elementos
+    before: coloca antes de alguma tag algo que esteja no script
+    EX: 
+        li::before{
+            content: "> "
+        }
+    
+        aqui teremos a inserção de um '>' antes de todas tag li
+
+    after: após alguma tag escolhida ela aparecerá oque estiver pra acontecer segundo o script
+    EX: 
+        li::after{
+            content: " >"
+        }
+
+    esse script certificará que após alguma ocorrencia de um li será colocado um ' >'
+
+    first-line: forçará a primeira linha da tag a seguir o script, porem é apenas ela
+    EX: 
+        p::first-line{
+            font-weight: bold;
+        }
+
+    todas as primeiras linhas de todas as tag p será modificado pra ter negrito, e voltará ao normal apos sair da primeira linha.
+*/
+

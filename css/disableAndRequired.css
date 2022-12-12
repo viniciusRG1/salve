@@ -1,0 +1,20 @@
+/*
+    aqui vamos trabalhar com 2 atributos, que é o disabled que anula a ação da tag como input, ou required que obriga ela a ter algo ou fazer algo
+    e aplicar modificação a depender do seu estado
+    EX:
+        input:disabled{
+            background-color: red;
+        }
+
+    aqui caso o input esteja desabilitado ele terá um fundo vermelho
+    
+    EX:
+        input:required{
+            background-color: red;
+        }
+    
+    aqui caso estava required o fundo da caixa de texto será vermelho obrigatoriamente.
+
+    pseudo-classes, estudar bastante no site
+
+*/

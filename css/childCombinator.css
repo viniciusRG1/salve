@@ -1,0 +1,9 @@
+/*
+    ele modifica apenas tags que são filhas diretos da tag na qual você utiliza o seletor e irá modificar 
+    podemos também fazer uma linha de raciocinio para que o script procure o padrão desejado
+
+    EX: 
+        ul > li {
+            color: blue;
+        }
+    */

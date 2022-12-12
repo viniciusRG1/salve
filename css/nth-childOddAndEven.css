@@ -1,0 +1,17 @@
+/* 
+    aqui é apenas uma extenção do modificador anterior, no qual podemos modificar todos em posição impar ou todos na posição par.
+
+    EX:
+    ul li:nth-child(odd){
+        color:gray;
+    }
+
+    nesse exemplo mudará todos das posições impares
+
+    EX:
+    ul li:nth-child(even){
+        color:gray;
+    }
+
+    nesse exemplo modificará todos das posições pares.
+*/
