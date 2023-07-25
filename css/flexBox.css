@@ -1,0 +1,259 @@
+/*
+    flexBox é uma forma de fazer com que uma caixa usando css possa se adequar a qualquer tipo de trabalho que seja preciso
+
+    flex container 
+        se torna flexivel apartir dos itens flexiveis que está dentro dele 
+    Nesting
+        elementos com outros elemetos dentro desse primeiro elementos
+    Axis
+        ideia de eixo principal e cruzado, normalmente os elementos na tela ficam dispostos em fila devido ao eixo principa
+        porem podemos mudar isso caso modificamos, como por exemplo mudar o eixo principal
+
+        NORMAL FLOW
+            .container{
+                display flex;
+            }
+
+            EX
+                123
+        ALTERNATIVE FLOW
+            .container{
+                display: flex;
+                flex-direction column;
+            }
+
+            Ex
+                1
+                2
+                3
+        
+        podemos também alinhar o conteudo com o final do box utilizando justify-content: flex-end;
+        e se utilizando do mesmo código podemos fazer também com que joga pro final verticalmente 
+        usando o flex-direction e uma altura escolhida, pois a altura é calculada em tempo real a criação do programa
+        então para poder ver alguam diferença temos que ou ter outros elementos ou colocar uma altura 
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                height: 100vh;
+            }
+        
+    Flex sizing
+            altera tanto o tamanho quando a largura dos item para o preenchimento total dos espaços do container
+                .container{
+                    display: flex;
+                    border: 1px solid red;
+                    height: 200px;
+                }
+
+                .item{
+                    background-color: gray;
+                    border: 1px solid;
+                    flex: 1;
+                }
+            nesse exemplo a cor cinza preenche todo o espaço da caixa, tanto verticalmente quanto horizontalmente 
+    
+    PROPRIEDADES DO FLEX-CONTAINER
+        aqui será pra enteder que Flex é uma dimensão tanto horizontal quanto vertical, com a possibilidade de modificação com o flex-direction
+        valores:(row | reverse-row | column | reverse-column)
+        
+        por padrão temos no display flex a flex-direction:row que seria a direção em linha e o eixo cruzado seria na vertical
+        quando o flex-direction é mudado para row-reverse temos o inicio do eixo do lado contrario ao abitual, ou seja, na direita para a esquerda, isso também altera 
+        a vizualização, que ficará da direita pra esquerda
+        quando é mudado para column, o eixo ficará de cima para baixo, e no seu column-reverse ficará de baixo para cima, mas somente a ordem, pois devemos lembrar que a altura se adequa ao espaço que os objetos ocupam de altura
+
+    FLEX-WRAP
+        no geral se cria uma nova linha caso o espaço caso todos os objetos não caibam no espaço do navegador, porem, nessa criação terá um novo eixo main, que faz com que ela se tenha a possibilidade de ter um resultado diferente da linha anterior, mesmo tendo os mesmo comandos
+        isso se deve ao fato que a linha de baixo pode ter um número diferente de itens do que a linha anterior, fazendo com que fique diferente
+
+                EX
+                    .box{
+                        display:flex;
+                        flex-wrap: wrap-reverse;
+
+                        border: 1px dashed red;
+                    }
+
+                    .bor div{
+                        border:1px solid; 
+                        
+                        width: 80x;
+                    }
+                
+        lembrando que podemos usar o wrap-reverse que inverte, ou seja, o preenchimento começa de baixo para cima
+
+    FLEX-FLOW
+        o flex-flow é um comando rápido para se utilizar do flex-wrap juntamente com o comando de direção, dando rapidamente o sentido 
+        que o wrap deve seguir
+    
+        .box{
+            display: flex;
+            flex-flow: column wrap;
+            border: 1px dashed red;
+        }
+
+    JUSTIFY-CONTENT
+        é uma edição de posição dos conteudos dentro do display flex
+
+        flex-start 
+            todos no inicio
+                EX
+                    .box{
+                        display: flex;
+                        flex-direction:column;
+
+                        justify-content: flex-start;
+
+                        border:1px dashed red;
+
+                        height: 150px;
+                    }
+
+        flex-end
+            todos no fim
+                EX
+                    .box{
+                        display: flex;
+                        flex-direction:column;
+
+                        justify-content: flex-end;
+
+                        border:1px dashed red;
+
+                        height: 150px;
+                    }
+
+        center
+            todos no centro
+                EX  
+                    .box{
+                        display: flex;
+                        flex-direction:column;
+
+                        justify-content: center;
+
+                        border:1px dashed red;
+
+                        height: 150px;
+                    }
+        
+        space-around
+            distanciamento de dominio iguais entre os itens, como se cada item tive-se 2 espaços de cada lado dele
+                EX
+                    .box{
+                        display: flex;
+                        flex-direction:column;
+
+                        justify-content: space-around;
+
+                        border:1px dashed red;
+
+                        height: 150px;
+                    }
+
+                    ficaria assim:
+                        '  a    b    c    d  '
+                    é como se tive-se pessoa de braços abertos e que não podem se tocar, a distancia da mão conta
+        
+        space-between
+            a distancia entre eles são iguais
+                EX
+                    .box{
+                        display: flex;
+                        flex-direction:column;
+
+                        justify-content: space-between;
+
+                        border:1px dashed red;
+
+                        height: 150px;
+                    }
+        
+        space-evenly
+            todas as distâncias são iguais, independente de borda ou item
+                EX
+                    .box{
+                        display: flex;
+                        flex-direction:column;
+
+                        justify-content: space-evenly;
+
+                        border:1px dashed red;
+
+                        height: 150px;
+                    }
+        
+        lembrando que o justify-content pode ser combinado com a direção como usado no exemplos
+    
+    
+    ALIGN-ITEMS
+        alinhamento dos eixos cruzados
+
+        stretch
+            fazendo o eixo auxiliar se deslisar até o limite 
+                EX
+                    .box{
+                        display: flex;
+
+                        alisgn-items:stretch;
+
+                        border:1px
+
+                        height:150px
+                    }
+        
+        flex-start
+            faz com que o eixo auxiliar se desloque para o fim do item imediatamente
+                EX
+                    .box{
+                        display: flex;
+
+                        alisgn-items:flex-start;
+
+                        border:1px
+
+                        height:150px
+                    }
+        
+        flex-end
+            faz com  que o eixo auxiliar empurre os items para o fim do box
+                EX
+                    .box{
+                        display: flex;
+
+                        alisgn-items:flex-end;
+
+                        border:1px
+
+                        height:150px
+                    }
+
+        center
+            faz com que todos os item fiquei o mais concentrado no centro
+                EX
+                    .box{
+                        display: flex;
+
+                        alisgn-items:center;
+
+                        border:1px
+
+                        height:150px
+                    }
+        
+        lembrando que todos eles podem ser usado com a mudança de eixo, e teria suas funções trocadas
+
+    
+    GAP 
+        espaços entre os item
+            EX
+                .box{
+                        display: flex;
+
+                        gap: 2px;
+
+                        border:1px
+
+                    }
+*/
+

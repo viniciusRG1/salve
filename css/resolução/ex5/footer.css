@@ -1,0 +1,18 @@
+*{margin: 0;}
+
+.flexBox{
+    display: flex;
+    min-height: 100vh;
+}
+
+.footer{
+    margin-top: auto;
+    background-color: purple;
+    color: white;
+    height: 8rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

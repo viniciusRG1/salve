@@ -1,0 +1,22 @@
+.modal{
+    border-radius: 5%;
+    background-color: blueviolet;
+    display: flex;
+    height: 400px;
+    width: 300px;
+    padding: 10px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    left: 45%;
+}
+
+.body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}

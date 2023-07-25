@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BancoFinal:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/BancoFinal_jar</output-path>
+    <root id="archive" name="BancoFinal.jar">
+      <element id="module-output" name="BancoFinal" />
+    </root>
+  </artifact>
+</component>

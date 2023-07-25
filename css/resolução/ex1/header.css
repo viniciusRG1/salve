@@ -1,0 +1,38 @@
+    .main{
+        padding: 4rem;
+        margin: 0;
+        font-family: 'Courier New', Courier, monospace;
+        font: 500;
+    }
+
+    .boxFlex{
+        display: flex;
+        
+        justify-content: space-between;
+
+        align-items: center;
+
+    }
+
+    .itemFlex{
+        border-radius: 5%;
+        
+    }
+
+    .itemFlex:last-child{
+        border-color: blueviolet;
+        background-color: blueviolet;
+        color: white;
+        padding: 1rem;
+    }
+
+    ul{
+        display: flex;
+        gap: 6rem;
+        align-items: center;
+    }
+
+    
+
+
+    

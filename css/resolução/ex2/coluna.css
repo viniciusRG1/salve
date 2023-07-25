@@ -1,0 +1,28 @@
+.main{
+    padding: 4rem;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.boxFlex{
+    display: flex;
+    gap:2rem;
+    padding: 40px;
+    align-items: center;
+}
+
+.boxInterna{
+    height: 400px;
+    border-radius: 2%;
+    padding: 40px;
+}
+
+.boxInterna:nth-child(1){
+    flex-grow: 1;
+    background-color: aquamarine;
+}
+
+.boxInterna:nth-child(2){
+    flex-grow: 4;
+    background-color: brown;
+}

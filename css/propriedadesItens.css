@@ -1,0 +1,79 @@
+/*
+    FLEX-BASIS
+        coloca a largura dos itens com base para todos, seria como uma largura e altura, isso é definido com base no eixo principal definido na flex
+            EX
+                .box{
+                    display: flex;
+
+                    border: 1px daashed red;
+                }
+
+                .box div{
+                    border: 1px solid;
+                    flex-basis: auto;
+                }
+        normalmente já é auto, isso quer dizer que após o fim do conteudo do item, também será o fim do seu espaço interno
+            EX
+                .box{
+                    display: flex;
+
+                    border: 1px daashed red;
+                }
+
+                .box div{
+                    border: 1px solid;
+                    flex-basis: 12px;
+                }
+        aqui definimos o tamanho em pixel 
+    
+    FLEX-GROW
+        é o crecimento com base no espaço disponivel e na proporção dada a cada item
+                EX
+                    EX
+                .box{
+                    display: flex;
+
+                    border: 1px daashed red;
+                }
+
+                .box div{
+                    border: 1px solid;
+                }
+
+                .box div:nth-child(2),
+                .box div:nth-child(3){
+                    flex-grow:1;
+                }
+
+                até aqui temos a proporção onde o 1 é o maior número então seria um pra um, no caso, 100%
+
+                .box div:nth-child(4){
+                    flex-grow:2;
+                }
+
+                já nesse caso o 2 é o maior número, o tortando 100% e o 1 que é metade do 2 também tem seu valor cortado pela metade 50% 
+                
+                ou seja se tive-se apenas esse 3 e tive-se mos 4 espaços disponiveis, o número 4 teria 2, enquanto o 2 e o 3 teriam apenas 1
+
+                lembrando que essa propriedade tembém é colocada quando usamos o flex-direction pra mudar o eixo principal
+    
+    FLEX-SHRINK
+        é o estreitamento conforme a proporção dada.
+             EX
+                .box{
+                    display: flex;
+
+                    border: 1px daashed red;
+                }
+
+                .box div{
+                    border: 1px solid;
+                }
+
+                .box div:nth-child(2),
+                .box div:nth-child(3){
+                    flex-shrink:1;
+                }
+        /* 
+                não entedi direito, pergutar amanha 
+        */
